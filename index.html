@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le' Demons Pizza - Free Home Delivery | Ghaziabad</title>
+<meta name="description" content="Best Pizza in Ghaziabad - Akbarpur, Behrampur, Mangal Bazar. Free home delivery above ₹249. Order online!">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #e63946;
+    --dark-red: #c1121f;
+    --blue: #023e8a;
+    --yellow: #ffd60a;
+    --orange: #f77f00;
+    --white: #ffffff;
+    --light: #f8f9fa;
+    --dark: #1a1a2e;
+    --green: #2dc653;
+    --grad1: linear-gradient(135deg, #e63946, #f77f00);
+    --grad2: linear-gradient(135deg, #023e8a, #0077b6);
+    --shadow: 0 8px 32px rgba(0,0,0,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 999;
+    background: rgba(2, 62, 138, 0.97);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--grad1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .nav-brand {
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  .nav-brand span { color: var(--yellow); }
+
+  .nav-links {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+
+  .nav-links a:hover, .nav-links a.active {
+    background: var(--yellow);
+    color: var(--dark);
+  }
+
+  .nav-order-btn {
+    background: var(--grad1);
+    color: white !important;
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
+    font-weight: 600 !important;
+    animation: pulse-nav 2s infinite;
+  }
+
+  @keyframes pulse-nav {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(230,57,70,0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(230,57,70,0); }
+  }
+
+  /* ===== HERO ===== */
+  #hero {
+    min-height: 100vh;
+    background: var(--grad2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,214,10,0.1) 0%, transparent 70%);
+    animation: rotate-bg 15s linear infinite;
+  }
+
+  @keyframes rotate-bg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Floating pizza emojis */
+  .float-pizza {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.15;
+    animation: float-anim 6s ease-in-out infinite;
+  }
+  .float-pizza:nth-child(1) { top: 15%; left: 5%; animation-delay: 0s; }
+  .float-pizza:nth-child(2) { top: 25%; right: 8%; animation-delay: 1.5s; }
+  .float-pizza:nth-child(3) { bottom: 30%; left: 10%; animation-delay: 3s; }
+  .float-pizza:nth-child(4) { bottom: 20%; right: 5%; animation-delay: 4.5s; }
+
+  @keyframes float-anim {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+  }
+
+  .hero-badge {
+    background: var(--yellow);
+    color: var(--dark);
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: slideDown 0.8s ease;
+  }
+
+  .hero-title {
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 10px;
+    animation: slideDown 0.9s ease;
+  }
+
+  .hero-title span { color: var(--yellow); }
+
+  .hero-subtitle {
+    color: rgba(255,255,255,0.85);
+    font-size: 1rem;
+    margin-bottom: 30px;
+    animation: slideDown 1s ease;
+  }
+
+  .hero-subtitle strong { color: var(--yellow); }
+
+  .hero-offers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 30px;
+    animation: slideUp 1.1s ease;
+  }
+
+  .offer-chip {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+  }
+
+  .offer-chip.hot {
+    background: var(--red);
+    border-color: var(--red);
+    animation: pulse-chip 2s infinite;
+  }
+
+  @keyframes pulse-chip {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: slideUp 1.2s ease;
+  }
+
+  .btn-primary {
+    background: var(--grad1);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 25px rgba(230,57,70,0.4);
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 35px rgba(230,57,70,0.5); }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.5);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover { background: rgba(255,255,255,0.15); border-color: white; }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.5);
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-8px); } }
+
+  @keyframes slideDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 70px 20px; }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-title h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+
+  .section-title h2 span { color: var(--red); }
+
+  .section-title p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  .title-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--grad1);
+    border-radius: 2px;
+    margin: 12px auto;
+  }
+
+  /* ===== TEAM / BIO SECTION ===== */
+  #team {
+    background: var(--dark);
+    padding: 70px 20px;
+  }
+
+  #team .section-title h2 { color: white; }
+  #team .section-title p { color: rgba(255,255,255,0.6); }
+  #team .title-divider { background: var(--grad1); }
+
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .team-card {
+    text-align: center;
+    animation: fadeInUp 0.8s ease both;
+  }
+
+  .team-card:nth-child(1) { animation-delay: 0.1s; }
+  .team-card:nth-child(2) { animation-delay: 0.3s; }
+  .team-card:nth-child(3) { animation-delay: 0.5s; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .team-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--yellow);
+    box-shadow: 0 0 0 4px rgba(255,214,10,0.3);
+    margin-bottom: 15px;
+    animation: avatar-glow 3s ease-in-out infinite;
+    transition: transform 0.3s;
+  }
+
+  .team-avatar:hover { transform: scale(1.08) rotate(3deg); }
+
+  @keyframes avatar-glow {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(255,214,10,0.3), 0 0 20px rgba(255,214,10,0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(255,214,10,0.5), 0 0 35px rgba(255,214,10,0.35); }
+  }
+
+  .team-name {
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  .team-role {
+    color: var(--yellow);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(255,214,10,0.1);
+    border: 1px solid rgba(255,214,10,0.3);
+    border-radius: 20px;
+    padding: 3px 12px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .team-ig {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.78rem;
+    transition: color 0.3s;
+  }
+
+  .team-ig:hover { color: var(--yellow); }
+
+  /* ===== OFFERS STRIP ===== */
+  #offers {
+    background: var(--grad1);
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .offers-ticker {
+    display: flex;
+    gap: 0;
+    animation: ticker 20s linear infinite;
+    white-space: nowrap;
+    padding: 18px 0;
+  }
+
+  .offer-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0 40px;
+    border-right: 2px solid rgba(255,255,255,0.3);
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ===== MENU ===== */
+  #menu { background: var(--light); }
+
+  .menu-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+  .menu-tab {
+    background: white;
+    border: 2px solid #e0e0e0;
+    color: #555;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .menu-tab.active, .menu-tab:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230,57,70,0.3);
+  }
+
+  .menu-category { display: none; }
+  .menu-category.active { display: block; }
+
+  .category-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4rem;
+    color: var(--blue);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .category-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--blue), transparent);
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+  }
+
+  .menu-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+  }
+
+  .menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    border-color: var(--red);
+  }
+
+  .menu-card.selected {
+    border-color: var(--green);
+    box-shadow: 0 6px 25px rgba(45,198,83,0.3);
+  }
+
+  .menu-card-header {
+    background: var(--grad2);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    min-height: 100px;
+  }
+
+  .menu-card-body { padding: 18px; }
+
+  .menu-card-name {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: var(--dark);
+  }
+
+  .menu-card-desc {
+    font-size: 0.78rem;
+    color: #888;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .menu-card-prices {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .price-badge {
+    background: var(--light);
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .price-badge:hover, .price-badge.selected-size {
+    background: var(--red);
+    color: white;
+    border-color: var(--red);
+  }
+
+  .price-badge span {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: inherit;
+    opacity: 0.7;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+    background: var(--grad1);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+  }
+
+  .add-to-cart-btn:hover { transform: scale(1.02); }
+  .add-to-cart-btn.added { background: linear-gradient(135deg, #2dc653, #1a9e3f); }
+
+  /* Veg badge */
+  .veg-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 2px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .veg-badge::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--green);
+  }
+
+  /* ===== CART SIDEBAR ===== */
+  .cart-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 998;
+    background: var(--grad1);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 6px 25px rgba(230,57,70,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse-cart 2s infinite;
+    transition: transform 0.3s;
+  }
+
+  .cart-toggle:hover { transform: scale(1.1); }
+
+  @keyframes pulse-cart {
+    0%, 100% { box-shadow: 0 6px 25px rgba(230,57,70,0.5); }
+    50% { box-shadow: 0 8px 35px rgba(230,57,70,0.7); }
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--yellow);
+    color: var(--dark);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(380px, 100vw);
+    height: 100vh;
+    background: white;
+    z-index: 9999;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.2);
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cart-sidebar.open { right: 0; }
+
+  .cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9998;
+    display: none;
+    backdrop-filter: blur(3px);
+  }
+
+  .cart-overlay.show { display: block; }
+
+  .cart-header {
+    background: var(--grad2);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cart-header h3 { font-family: 'Fredoka One', cursive; font-size: 1.3rem; }
+
+  .cart-close {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-items { flex: 1; overflow-y: auto; padding: 20px; }
+
+  .cart-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #aaa;
+  }
+
+  .cart-empty-icon { font-size: 4rem; margin-bottom: 15px; }
+
+  .cart-item {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .cart-item-emoji { font-size: 2rem; }
+
+  .cart-item-info { flex: 1; }
+
+  .cart-item-name { font-weight: 600; font-size: 0.88rem; }
+
+  .cart-item-size { font-size: 0.72rem; color: #888; }
+
+  .cart-item-price { font-weight: 700; color: var(--red); font-size: 0.95rem; }
+
+  .cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .qty-btn {
+    background: white;
+    border: 1px solid #e0e0e0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .qty-btn:hover { background: var(--red); color: white; border-color: var(--red); }
+
+  .qty-num { font-weight: 700; min-width: 20px; text-align: center; }
+
+  .cart-footer { padding: 20px; border-top: 1px solid #e0e0e0; }
+
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .cart-total span { font-size: 1rem; color: #555; }
+  .cart-total strong { font-size: 1.3rem; color: var(--red); }
+
+  .checkout-btn {
+    width: 100%;
+    background: var(--grad1);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .checkout-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(230,57,70,0.4); }
+
+  /* ===== ORDER MODAL ===== */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+  }
+
+  .modal-overlay.show { display: flex; }
+
+  .modal {
+    background: white;
+    border-radius: 24px;
+    padding: 35px;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modal-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  @keyframes modal-pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .modal h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.6rem;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+
+  .modal p { color: #888; font-size: 0.88rem; margin-bottom: 25px; }
+
+  .form-group { margin-bottom: 18px; }
+
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 6px;
+  }
+
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--red);
+  }
+
+  .payment-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .payment-opt {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 12px 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #555;
+  }
+
+  .payment-opt .pay-icon { font-size: 1.8rem; margin-bottom: 4px; }
+
+  .payment-opt.selected {
+    border-color: var(--red);
+    background: rgba(230,57,70,0.05);
+    color: var(--red);
+  }
+
+  .order-summary {
+    background: var(--light);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .order-summary h4 { font-weight: 700; margin-bottom: 10px; font-size: 0.9rem; }
+
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    padding: 4px 0;
+    color: #555;
+  }
+
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--red);
+    border-top: 1px solid #e0e0e0;
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+
+  .upi-section {
+    background: #e8f5e9;
+    border: 2px solid var(--green);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: none;
+    margin-bottom: 15px;
+  }
+
+  .upi-section.show { display: block; }
+
+  .upi-id {
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    background: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 8px;
+    letter-spacing: 1px;
+  }
+
+  .place-order-btn {
+    width: 100%;
+    background: var(--grad1);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 15px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .place-order-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(230,57,70,0.4); }
+
+  .cancel-btn {
+    width: 100%;
+    background: transparent;
+    color: #888;
+    border: 2px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .cancel-btn:hover { border-color: #ccc; color: #555; }
+
+  /* ===== SUCCESS MODAL ===== */
+  .success-modal {
+    text-align: center;
+    padding: 40px 30px;
+  }
+
+  .success-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: success-bounce 0.5s ease;
+  }
+
+  @keyframes success-bounce {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
+
+  .success-modal h2 { font-family: 'Fredoka One', cursive; font-size: 2rem; color: var(--green); margin-bottom: 10px; }
+  .success-modal p { color: #666; line-height: 1.6; }
+
+  .whatsapp-track-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: all 0.3s;
+  }
+
+  .whatsapp-track-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37,211,102,0.4); }
+
+  /* ===== LOCATION SECTION ===== */
+  #location { background: white; }
+
+  .location-card {
+    background: var(--grad2);
+    border-radius: 24px;
+    padding: 40px;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+
+  .location-card h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .location-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .location-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 12px 18px;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  .location-item-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+  .check-delivery-btn {
+    background: var(--yellow);
+    color: var(--dark);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+  }
+
+  .check-delivery-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255,214,10,0.5); }
+
+  .delivery-result {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    display: none;
+  }
+
+  .delivery-result.yes { background: rgba(45,198,83,0.2); color: var(--green); display: block; }
+  .delivery-result.no { background: rgba(230,57,70,0.2); color: #ff6b6b; display: block; }
+
+  /* ===== CONTACT ===== */
+  #contact { background: var(--dark); }
+
+  #contact .section-title h2 { color: white; }
+  #contact .section-title p { color: rgba(255,255,255,0.6); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+
+  .contact-card:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.3);
+  }
+
+  .contact-icon { font-size: 2.2rem; margin-bottom: 12px; }
+  .contact-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5); margin-bottom: 5px; }
+  .contact-value { font-weight: 600; font-size: 0.95rem; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0a0a0a;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .footer-logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 8px;
+  }
+
+  .footer-logo span { color: var(--yellow); }
+
+  .footer-ig-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 15px 0;
+  }
+
+  .footer-ig-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    transition: all 0.3s;
+  }
+
+  .footer-ig-link:hover { background: var(--red); color: white; border-color: var(--red); }
+
+  .footer-copy { font-size: 0.75rem; margin-top: 15px; }
+
+  /* ===== SCROLL TO TOP ===== */
+  .scroll-top {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 997;
+    transition: all 0.3s;
+  }
+
+  .scroll-top.show { display: flex; }
+  .scroll-top:hover { transform: translateY(-3px); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .payment-options { grid-template-columns: repeat(3, 1fr); }
+    .menu-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.2rem; }
+    .modal { padding: 25px 20px; }
+  }
+
+  /* ===== NOTIFICATION TOAST ===== */
+  .toast {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: var(--dark);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    z-index: 999999;
+    box-shadow: var(--shadow);
+    transform: translateX(120%);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+  }
+
+  .toast.show { transform: translateX(0); }
+  .toast.success { border-left: 4px solid var(--green); }
+  .toast.error { border-left: 4px solid var(--red); }
+
+  /* Zomato/Swiggy buttons */
+  .app-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+  }
+
+  .app-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .zomato-link { background: #e23744; color: white; }
+  .swiggy-link { background: #ff6d00; color: white; }
+  .app-link:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    <div class="nav-logo-icon">🍕</div>
+    <div>
+      <div class="nav-brand">Le' <span>Demons</span> Pizza</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#offers-section">Offers</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#menu" class="nav-order-btn">Order Now 🔥</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="float-pizza">🍕</div>
+  <div class="float-pizza">🍔</div>
+  <div class="float-pizza">🍝</div>
+  <div class="float-pizza">🎂</div>
+
+  <div class="hero-badge">📍 Ghaziabad • Free Home Delivery</div>
+  
+  <h1 class="hero-title">
+    Le' <span>Demons</span><br>Pizza®
+  </h1>
+  
+  <p class="hero-subtitle">
+    Best Pizza in Ghaziabad | <strong>Akbarpur • Behrampur • Mangal Bazar</strong><br>
+    Available on Zomato & Swiggy 🚀
+  </p>
+
+  <div class="hero-offers">
+    <div class="offer-chip hot">🔥 Buy 1 Get 2nd at 50% Off</div>
+    <div class="offer-chip">🎂 Free Chocolava Cake</div>
+    <div class="offer-chip hot">🆓 Buy 1 Get 1 FREE every Friday!</div>
+    <div class="offer-chip">📦 Free Delivery above ₹249</div>
+  </div>
+
+  <div class="hero-buttons">
+    <a href="#menu" class="btn-primary">🍕 Order Now</a>
+    <a href="https://wa.me/919711082205?text=Hi! I want to order pizza 🍕" target="_blank" class="btn-secondary">💬 WhatsApp Order</a>
+  </div>
+
+  <div class="app-links">
+    <a href="https://zomato.com" target="_blank" class="app-link zomato-link">🔴 Order on Zomato</a>
+    <a href="https://swiggy.com" target="_blank" class="app-link swiggy-link">🟠 Order on Swiggy</a>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll Down</span>
+    <span>↓</span>
+  </div>
+</section>
+
+<!-- OFFERS TICKER -->
+<div id="offers">
+  <div class="offers-ticker">
+    <div class="offer-item">🔥 Buy 1 Medium Pizza - Get 2nd at 50% OFF!</div>
+    <div class="offer-item">🎂 FREE Chocolava Cake with 1 Medium Pizza + 1 Garlic Bread!</div>
+    <div class="offer-item">🆓 Buy 1 Get 1 FREE Medium Pizza Every FRIDAY!</div>
+    <div class="offer-item">🚚 Free Home Delivery on Orders Above ₹249!</div>
+    <div class="offer-item">🎉 Birthday Party, Kitty Party & Bulk Orders Available!</div>
+    <div class="offer-item">📞 Call: 9711082205 or 9810653264</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="offer-item">🔥 Buy 1 Medium Pizza - Get 2nd at 50% OFF!</div>
+    <div class="offer-item">🎂 FREE Chocolava Cake with 1 Medium Pizza + 1 Garlic Bread!</div>
+    <div class="offer-item">🆓 Buy 1 Get 1 FREE Medium Pizza Every FRIDAY!</div>
+    <div class="offer-item">🚚 Free Home Delivery on Orders Above ₹249!</div>
+    <div class="offer-item">🎉 Birthday Party, Kitty Party & Bulk Orders Available!</div>
+    <div class="offer-item">📞 Call: 9711082205 or 9810653264</div>
+  </div>
+</div>
+
+<!-- TEAM SECTION -->
+<section id="team">
+  <div class="section-title">
+    <h2>Meet Our <span style="color:var(--yellow)">Team</span> 👨‍🍳</h2>
+    <div class="title-divider"></div>
+    <p>The passionate people behind every delicious slice</p>
+  </div>
+
+  <div class="team-grid">
+    <!-- VINAY PANDEY - Owner -->
+    <div class="team-card">
+      <img 
+        src="team/vinay.jpg" 
+        alt="Vinay Pandey" 
+        class="team-avatar"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+      <div style="display:none; width:110px; height:110px; background:var(--grad1); border-radius:50%; align-items:center; justify-content:center; font-size:3rem; margin:0 auto 15px; border:4px solid var(--yellow);">👨‍💼</div>
+      <div class="team-name">Vinay Pandey</div>
+      <div class="team-role">👑 Founder & CEO</div>
+      <a href="https://instagram.com/vinaypandey6777" target="_blank" class="team-ig">
+        📸 @vinaypandey6777
+      </a>
+    </div>
+
+    <!-- BATTAKH - Co-CEO -->
+    <div class="team-card">
+      <img 
+        src="team/battakh.jpg" 
+        alt="Battakh" 
+        class="team-avatar"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+      <div style="display:none; width:110px; height:110px; background:var(--grad2); border-radius:50%; align-items:center; justify-content:center; font-size:3rem; margin:0 auto 15px; border:4px solid var(--yellow);">🧑‍🍳</div>
+      <div class="team-name">Battakh</div>
+      <div class="team-role">🌟 Co-CEO</div>
+      <a href="https://instagram.com/" target="_blank" class="team-ig">
+        📸 @battakh
+      </a>
+    </div>
+
+    <!-- SHUSHANT SINGH - Co-CEO -->
+    <div class="team-card">
+      <img 
+        src="team/shushant.jpg" 
+        alt="Shushant Singh" 
+        class="team-avatar"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+      <div style="display:none; width:110px; height:110px; background:linear-gradient(135deg,#f77f00,#d62828); border-radius:50%; align-items:center; justify-content:center; font-size:3rem; margin:0 auto 15px; border:4px solid var(--yellow);">👨‍💼</div>
+      <div class="team-name">Shushant Singh</div>
+      <div class="team-role">🌟 Co-CEO</div>
+      <a href="https://instagram.com/" target="_blank" class="team-ig">
+        📸 @shushant_singh
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MENU SECTION -->
+<section id="menu">
+  <div class="section-title">
+    <h2>Our <span>Menu</span> 🍕</h2>
+    <div class="title-divider"></div>
+    <p>Fresh, hot, and loaded with cheese — made with love in Ghaziabad</p>
+  </div>
+
+  <!-- Category Tabs -->
+  <div class="menu-tabs">
+    <button class="menu-tab active" onclick="showCategory('simply-veg')">🌿 Simply Veg</button>
+    <button class="menu-tab" onclick="showCategory('veg-delight')">🥬 Veg Delight</button>
+    <button class="menu-tab" onclick="showCategory('cheese-loaded')">🧀 Cheese Loaded</button>
+    <button class="menu-tab" onclick="showCategory('burgers')">🍔 Burgers</button>
+    <button class="menu-tab" onclick="showCategory('sides')">🍟 Sides & More</button>
+    <button class="menu-tab" onclick="showCategory('drinks')">🥤 Drinks</button>
+  </div>
+
+  <!-- Simply Veg Pizza -->
+  <div class="menu-category active" id="cat-simply-veg">
+    <div class="category-title">🌿 Simply Veg Pizza</div>
+    <div class="menu-grid">
+      <div class="menu-card" onclick="selectItem(this, 'Margherita (Single Cheese)', {Regular:99, Medium:209, Large:360}, '🍕')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍕</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Margherita (Single Cheese)</div>
+          <div class="menu-card-desc">Classic tomato base with mozzarella cheese — a timeless favourite</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹99<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹209<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹360<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Margherita (Single Cheese)', {Regular:99, Medium:209, Large:360}, '🍕')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Cheese & Tomato', {Regular:99, Medium:209, Large:360}, '🍕')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍅</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cheese & Tomato</div>
+          <div class="menu-card-desc">Rich cheese with juicy tomatoes on a crispy base</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹99<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹209<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹360<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Cheese & Tomato', {Regular:99, Medium:209, Large:360}, '🍕')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Cheese & Corn', {Regular:99, Medium:209, Large:360}, '🌽')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🌽</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cheese & Corn</div>
+          <div class="menu-card-desc">Sweet corn with gooey cheese — a crowd pleaser</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹99<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹209<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹360<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Cheese & Corn', {Regular:99, Medium:209, Large:360}, '🌽')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Cheese & Capsicum', {Regular:99, Medium:209, Large:360}, '🫑')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🫑</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cheese & Capsicum</div>
+          <div class="menu-card-desc">Colourful capsicum with melted cheese on crispy crust</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹99<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹209<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹360<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Cheese & Capsicum', {Regular:99, Medium:209, Large:360}, '🫑')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Cheese & Onion', {Regular:99, Medium:209, Large:360}, '🧅')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🧅</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cheese & Onion</div>
+          <div class="menu-card-desc">Caramelised onion with cheese blend — simple & delicious</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹99<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹209<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹360<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Cheese & Onion', {Regular:99, Medium:209, Large:360}, '🧅')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Cheese & Mushroom', {Regular:99, Medium:209, Large:360}, '🍄')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍄</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cheese & Mushroom</div>
+          <div class="menu-card-desc">Earthy mushrooms with creamy cheese — gourmet feel</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹99<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹209<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹360<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Cheese & Mushroom', {Regular:99, Medium:209, Large:360}, '🍄')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Cheese & Paneer', {Regular:99, Medium:209, Large:360}, '🧀')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🧀</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cheese & Paneer</div>
+          <div class="menu-card-desc">Soft paneer cubes with extra cheese — desi pizza lover's dream</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹99<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹209<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹360<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Cheese & Paneer', {Regular:99, Medium:209, Large:360}, '🧀')">Add to Cart 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Veg Delight -->
+  <div class="menu-category" id="cat-veg-delight">
+    <div class="category-title">🥬 Veg Delight Pizza</div>
+    <div class="menu-grid">
+      <div class="menu-card" onclick="selectItem(this, 'Double Cheese Margherita', {Regular:139, Medium:259, Large:410}, '🍕')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍕</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Double Cheese Margherita</div>
+          <div class="menu-card-desc">Loaded with extra cheese — for the cheese obsessed!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹139<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹259<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹410<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Double Cheese Margherita', {Regular:139, Medium:259, Large:410}, '🍕')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Fresh Veggie Cheese Pizza', {Regular:139, Medium:259, Large:410}, '🥗')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🥗</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Fresh Veggie Cheese Pizza</div>
+          <div class="menu-card-desc">Onion & Capsicum with fresh cheese blend</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹139<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹259<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹410<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Fresh Veggie Cheese Pizza', {Regular:139, Medium:259, Large:410}, '🥗')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Spicy Veg Cheese Pizza', {Regular:139, Medium:259, Large:410}, '🌶️')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🌶️</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Spicy Veg Cheese Pizza</div>
+          <div class="menu-card-desc">Onion & Red Paprika — for the spice lovers!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹139<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹259<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹410<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Spicy Veg Cheese Pizza', {Regular:139, Medium:259, Large:410}, '🌶️')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Indi Tandoori Paneer Pizza', {Regular:150, Medium:270, Large:430}, '🍛')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍛</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Indi Tandoori Paneer Pizza</div>
+          <div class="menu-card-desc">Paneer with Capsicum & Red Paprika — desi tadka!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹150<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹270<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹430<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Indi Tandoori Paneer Pizza', {Regular:150, Medium:270, Large:430}, '🍛')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Achari Do Pyaza Pizza', {Regular:150, Medium:270, Large:430}, '🧅')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🧅</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Achari Do Pyaza Pizza</div>
+          <div class="menu-card-desc">Onion with Achari flavour — uniquely Indian!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹150<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹270<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹430<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Achari Do Pyaza Pizza', {Regular:150, Medium:270, Large:430}, '🧅')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Volcano Pizza', {Medium:300, Large:430}, '🌋')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🌋</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Volcano Pizza</div>
+          <div class="menu-card-desc">Black Olive, Capsicum, Onion, Corn & Tomato — EPIC!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹300<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹430<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Volcano Pizza', {Medium:300, Large:430}, '🌋')">Add to Cart 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cheese Loaded -->
+  <div class="menu-category" id="cat-cheese-loaded">
+    <div class="category-title">🧀 Cheese Loaded Pizza</div>
+    <div class="menu-grid">
+      <div class="menu-card" onclick="selectItem(this, 'Farm Fresh Cheese Pizza', {Regular:189, Medium:349, Large:500}, '🌿')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🌿</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Farm Fresh Cheese Pizza</div>
+          <div class="menu-card-desc">Onion, Capsicum, Tomato, Mushroom — fresh from the farm!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹189<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹349<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹500<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Farm Fresh Cheese Pizza', {Regular:189, Medium:349, Large:500}, '🌿')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Peppy Paneer Cheese Pizza', {Regular:189, Medium:349, Large:500}, '🧀')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🧀</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Peppy Paneer Cheese Pizza</div>
+          <div class="menu-card-desc">Capsicum, Paneer, Onion, Red Paprika — spicy & creamy!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹189<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹349<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹500<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Peppy Paneer Cheese Pizza', {Regular:189, Medium:349, Large:500}, '🧀')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Extra Vaganza Cheese Pizza', {Regular:209, Medium:399, Large:550}, '🍕')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍕</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Extra Vaganza Cheese Pizza</div>
+          <div class="menu-card-desc">Onion, Capsicum, Tomato, Jalapeno, Corn, Black Olive, Mushroom</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹209<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹399<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹550<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Extra Vaganza Cheese Pizza', {Regular:209, Medium:399, Large:550}, '🍕')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Full Spicy Cheese Pizza', {Regular:209, Medium:399, Large:550}, '🌶️')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🌶️</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Full Spicy Cheese Pizza</div>
+          <div class="menu-card-desc">Capsicum, Red Paprika, Black Olive, Jalapeno — FIERY HOT! 🔥</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹209<span>Regular</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹399<span>Medium</span></div>
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹550<span>Large</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Full Spicy Cheese Pizza', {Regular:209, Medium:399, Large:550}, '🌶️')">Add to Cart 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Burgers -->
+  <div class="menu-category" id="cat-burgers">
+    <div class="category-title">🍔 Burgers</div>
+    <div class="menu-grid">
+      <div class="menu-card" onclick="selectItem(this, 'Classic Burger', {Single:50}, '🍔')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍔</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Classic Burger</div>
+          <div class="menu-card-desc">Simple, satisfying, and absolutely delicious</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹50<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Classic Burger', {Single:50}, '🍔')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Premium Burger', {Single:60}, '🍔')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍔</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Premium Burger</div>
+          <div class="menu-card-desc">Elevated burger with premium fillings & fresh bun</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹60<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Premium Burger', {Single:60}, '🍔')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Cheese Burger', {Single:70}, '🧀')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🧀</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cheese Burger</div>
+          <div class="menu-card-desc">Extra cheese in every bite — cheese lovers rejoice!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹70<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Cheese Burger', {Single:70}, '🧀')">Add to Cart 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sides -->
+  <div class="menu-category" id="cat-sides">
+    <div class="category-title">🍟 Sides & More</div>
+    <div class="menu-grid">
+      <div class="menu-card" onclick="selectItem(this, 'Stuffed Garlic Bread', {Single:100}, '🥖')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🥖</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Stuffed Garlic Bread</div>
+          <div class="menu-card-desc">Cheesy stuffed garlic bread — the perfect side!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹100<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Stuffed Garlic Bread', {Single:100}, '🥖')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Garlic Bread', {Single:90}, '🥖')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🥖</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Garlic Bread</div>
+          <div class="menu-card-desc">Crispy garlic bread with herb butter</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹90<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Garlic Bread', {Single:90}, '🥖')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Veg Pasta', {Single:99}, '🍝')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍝</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Veg Pasta</div>
+          <div class="menu-card-desc">Perfectly cooked pasta with rich sauce & veggies</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹99<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Veg Pasta', {Single:99}, '🍝')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Chocolava Cake', {Single:60}, '🎂')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🎂</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Chocolava Cake</div>
+          <div class="menu-card-desc">Warm chocolate lava cake — melt-in-your-mouth dessert</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹60<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Chocolava Cake', {Single:60}, '🎂')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'French Fries', {Single:50}, '🍟')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🍟</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">French Fries</div>
+          <div class="menu-card-desc">Crispy golden fries — the classic companion</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹50<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'French Fries', {Single:50}, '🍟')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Paneer Parcel (4 pcs)', {Single:100}, '📦')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">📦</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Paneer Parcel (4 pcs)</div>
+          <div class="menu-card-desc">4 crispy paneer parcels — great snack!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹100<span>4 pcs</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Paneer Parcel (4 pcs)', {Single:100}, '📦')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Veg Calzone', {Single:99}, '🌯')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🌯</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Veg Calzone</div>
+          <div class="menu-card-desc">Folded pizza pocket stuffed with cheesy veggies</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹99<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Veg Calzone', {Single:99}, '🌯')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Paneer Stuff Garlic Bread', {Single:100}, '🥖')">
+        <div class="veg-badge"></div>
+        <div class="menu-card-header">🥖</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Paneer Stuff Garlic Bread</div>
+          <div class="menu-card-desc">Garlic bread stuffed generously with spiced paneer</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹100<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Paneer Stuff Garlic Bread', {Single:100}, '🥖')">Add to Cart 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drinks -->
+  <div class="menu-category" id="cat-drinks">
+    <div class="category-title">🥤 Drinks</div>
+    <div class="menu-grid">
+      <div class="menu-card" onclick="selectItem(this, 'Cold Coffee', {Single:60}, '☕')">
+        <div class="menu-card-header">☕</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cold Coffee</div>
+          <div class="menu-card-desc">Chilled refreshing cold coffee — perfect combo with pizza!</div>
+          <div class="menu-card-prices">
+            <div class="price-badge" onclick="event.stopPropagation(); selectSize(this)">₹60<span>Single</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Cold Coffee', {Single:60}, '☕')">Add to Cart 🛒</button>
+        </div>
+      </div>
+      <div class="menu-card" onclick="selectItem(this, 'Cold Drinks (MRP)', {Single:0}, '🥤')">
+        <div class="menu-card-header">🥤</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cold Drinks</div>
+          <div class="menu-card-desc">Coca-Cola, Pepsi, Sprite & more — at MRP</div>
+          <div class="menu-card-prices">
+            <div class="price-badge">MRP<span>Varies</span></div>
+          </div>
+          <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(this, 'Cold Drink', {Single:40}, '🥤')">Add to Cart 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION SECTION -->
+<section id="location">
+  <div class="section-title">
+    <h2>Find <span>Us</span> 📍</h2>
+    <div class="title-divider"></div>
+    <p>We deliver within 5-10 km — check if we're in your area!</p>
+  </div>
+
+  <div class="location-card">
+    <h3>📍 Le' Demons Pizza</h3>
+    <div class="location-details">
+      <div class="location-item">
+        <div class="location-item-icon">🏠</div>
+        <div>Akbarpur, Behrampur, Mangal Bazar (Near Govt. School), Ghaziabad</div>
+      </div>
+      <div class="location-item">
+        <div class="location-item-icon">📞</div>
+        <div>9711082205 | 9810653264</div>
+      </div>
+      <div class="location-item">
+        <div class="location-item-icon">🕐</div>
+        <div>Open Daily | Delivery: 5 km radius from our shop</div>
+      </div>
+      <div class="location-item">
+        <div class="location-item-icon">🎉</div>
+        <div>Birthday Party, Kitty Party & Bulk Orders Available | Seating Space Available</div>
+      </div>
+    </div>
+    
+    <button class="check-delivery-btn" onclick="checkDelivery()">
+      📍 Check if We Deliver to You
+    </button>
+
+    <div id="delivery-result" class="delivery-result"></div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="section-title">
+    <h2>Get In <span style="color:var(--yellow)">Touch</span> 📲</h2>
+    <div class="title-divider" style="background: var(--yellow);"></div>
+    <p style="color:rgba(255,255,255,0.6)">We're just a call or WhatsApp away!</p>
+  </div>
+
+  <div class="contact-grid">
+    <a href="tel:9711082205" class="contact-card">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">Call Us</div>
+      <div class="contact-value">9711082205</div>
+    </a>
+    <a href="tel:9810653264" class="contact-card">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">Call Us</div>
+      <div class="contact-value">9810653264</div>
+    </a>
+    <a href="https://wa.me/919711082205?text=Hi! I want to order from Le Demons Pizza 🍕" target="_blank" class="contact-card" style="border-color: rgba(37,211,102,0.3);">
+      <div class="contact-icon">💬</div>
+      <div class="contact-label">WhatsApp Order</div>
+      <div class="contact-value">Chat & Order</div>
+    </a>
+    <a href="https://instagram.com/vinaypandey6777" target="_blank" class="contact-card">
+      <div class="contact-icon">📸</div>
+      <div class="contact-label">Instagram</div>
+      <div class="contact-value">@vinaypandey6777</div>
+    </a>
+    <a href="https://zomato.com" target="_blank" class="contact-card" style="border-color: rgba(226,55,68,0.3);">
+      <div class="contact-icon">🔴</div>
+      <div class="contact-label">Order on</div>
+      <div class="contact-value">Zomato</div>
+    </a>
+    <a href="https://swiggy.com" target="_blank" class="contact-card" style="border-color: rgba(247,127,0,0.3);">
+      <div class="contact-icon">🟠</div>
+      <div class="contact-label">Order on</div>
+      <div class="contact-value">Swiggy</div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Le' <span>Demons</span> Pizza®</div>
+  <p style="font-size:0.8rem; margin:5px 0;">Akbarpur, Behrampur, Mangal Bazar (Near Govt. School), Ghaziabad</p>
+  
+  <div class="footer-ig-links">
+    <a href="https://instagram.com/vinaypandey6777" target="_blank" class="footer-ig-link">📸 @vinaypandey6777 (Vinay - CEO)</a>
+    <a href="https://instagram.com/" target="_blank" class="footer-ig-link">📸 @battakh (Co-CEO)</a>
+    <a href="https://instagram.com/" target="_blank" class="footer-ig-link">📸 @shushant_singh (Co-CEO)</a>
+  </div>
+
+  <div class="footer-copy">
+    © 2026 Le' Demons Pizza® | Made with ❤️ in Ghaziabad | All Rights Reserved
+  </div>
+</footer>
+
+<!-- CART TOGGLE BUTTON -->
+<button class="cart-toggle" onclick="toggleCart()">
+  🛒
+  <span class="cart-badge" id="cart-badge">0</span>
+</button>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>🛒 Your Order</h3>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🍕</div>
+      <div>Your cart is empty!</div>
+      <div style="font-size:0.82rem; margin-top:8px;">Add some yummy pizza 😋</div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total Amount</span>
+      <strong id="cart-total">₹0</strong>
+    </div>
+    <button class="checkout-btn" onclick="openCheckout()">Proceed to Order 🚀</button>
+  </div>
+</div>
+
+<!-- ORDER MODAL -->
+<div class="modal-overlay" id="order-modal">
+  <div class="modal">
+    <h2>🍕 Place Your Order</h2>
+    <p>Fill in your details and we'll deliver to your door!</p>
+
+    <!-- Order Summary -->
+    <div class="order-summary" id="order-summary">
+      <h4>📋 Order Summary</h4>
+      <div id="summary-items"></div>
+      <div class="summary-total">
+        <span>Total</span>
+        <span id="summary-total">₹0</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>👤 Your Name *</label>
+      <input type="text" id="order-name" placeholder="Enter your full name">
+    </div>
+
+    <div class="form-group">
+      <label>📱 WhatsApp / Mobile Number *</label>
+      <input type="tel" id="order-phone" placeholder="Enter 10-digit mobile number" maxlength="10">
+    </div>
+
+    <div class="form-group">
+      <label>📍 Delivery Address *</label>
+      <textarea id="order-address" placeholder="Enter your full address with landmark" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>💳 Payment Method *</label>
+      <div class="payment-options">
+        <div class="payment-opt" onclick="selectPayment('upi', this)">
+          <div class="pay-icon">📲</div>
+          <div>UPI Pay</div>
+        </div>
+        <div class="payment-opt" onclick="selectPayment('cash', this)">
+          <div class="pay-icon">💵</div>
+          <div>Cash on Delivery</div>
+        </div>
+        <div class="payment-opt" onclick="selectPayment('online', this)">
+          <div class="pay-icon">💳</div>
+          <div>Online Pay</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPI Details -->
+    <div class="upi-section" id="upi-section">
+      <div style="font-weight:700; font-size:0.9rem; color:#2d6a4f;">📲 Pay via UPI</div>
+      <div style="font-size:0.8rem; color:#666; margin-top:4px;">Scan QR or pay to this UPI ID:</div>
+      <div class="upi-id">9711082205@paytm</div>
+      <div style="font-size:0.75rem; color:#888; margin-top:8px;">After payment, screenshot karega aur WhatsApp pe bhej dena ✅</div>
+    </div>
+
+    <div class="form-group">
+      <label>💬 Special Instructions (Optional)</label>
+      <input type="text" id="order-notes" placeholder="Less spicy, extra sauce, etc.">
+    </div>
+
+    <button class="place-order-btn" onclick="placeOrder()">🚀 Place Order Now!</button>
+    <button class="cancel-btn" onclick="closeModal('order-modal')">Cancel</button>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="success-modal">
+  <div class="modal">
+    <div class="success-modal">
+      <div class="success-icon">🎉</div>
+      <h2>Order Placed!</h2>
+      <p id="success-message">
+        Thank you! Your order has been received.<br>
+        Our team will confirm your order on WhatsApp shortly!
+      </p>
+      <a id="whatsapp-btn" href="#" target="_blank" class="whatsapp-track-btn">
+        💬 Track on WhatsApp
+      </a>
+      <br><br>
+      <button onclick="closeModal('success-modal')" class="cancel-btn">Continue Ordering</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast">
+  <span id="toast-icon">✅</span>
+  <span id="toast-msg">Added to cart!</span>
+</div>
+
+<script>
+  // ===== CART STATE =====
+  let cart = [];
+  let selectedPayment = '';
+
+  // ===== MENU TABS =====
+  function showCategory(cat) {
+    document.querySelectorAll('.menu-category').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.menu-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('cat-' + cat).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // ===== SIZE SELECTION =====
+  function selectSize(badge) {
+    const card = badge.closest('.menu-card');
+    card.querySelectorAll('.price-badge').forEach(b => b.classList.remove('selected-size'));
+    badge.classList.add('selected-size');
+  }
+
+  // ===== ADD TO CART =====
+  function addToCart(btn, name, prices, emoji) {
+    const card = btn.closest('.menu-card');
+    const selectedBadge = card.querySelector('.price-badge.selected-size');
+    
+    let size, price;
+    if (selectedBadge) {
+      const sizeLabel = selectedBadge.querySelector('span').textContent;
+      size = sizeLabel;
+      price = parseInt(selectedBadge.textContent.replace('₹','').replace(sizeLabel,'').trim());
+    } else {
+      // Auto-select first
+      const firstBadge = card.querySelector('.price-badge');
+      size = firstBadge.querySelector('span').textContent;
+      price = parseInt(firstBadge.textContent.replace('₹','').replace(size,'').trim());
+      firstBadge.classList.add('selected-size');
+    }
+
+    if (price === 0) price = 40; // Default for MRP items
+
+    // Check if already in cart
+    const existing = cart.find(i => i.name === name && i.size === size);
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({ name, size, price, emoji, qty: 1 });
+    }
+
+    updateCartUI();
+    showToast('✅', `${emoji} ${name} (${size}) added!`);
+    
+    btn.textContent = '✅ Added!';
+    btn.classList.add('added');
+    setTimeout(() => {
+      btn.textContent = 'Add to Cart 🛒';
+      btn.classList.remove('added');
+    }, 2000);
+  }
+
+  // ===== UPDATE CART UI =====
+  function updateCartUI() {
+    const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+    const count = cart.reduce((sum, i) => sum + i.qty, 0);
+    
+    document.getElementById('cart-badge').textContent = count;
+    document.getElementById('cart-total').textContent = '₹' + total;
+
+    const cartItemsEl = document.getElementById('cart-items');
+    
+    if (cart.length === 0) {
+      cartItemsEl.innerHTML = `
+        <div class="cart-empty">
+          <div class="cart-empty-icon">🍕</div>
+          <div>Your cart is empty!</div>
+          <div style="font-size:0.82rem; margin-top:8px;">Add some yummy pizza 😋</div>
+        </div>`;
+      return;
+    }
+
+    cartItemsEl.innerHTML = cart.map((item, idx) => `
+      <div class="cart-item">
+        <div class="cart-item-emoji">${item.emoji}</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-size">${item.size}</div>
+          <div class="cart-item-price">₹${item.price * item.qty}</div>
+        </div>
+        <div class="cart-item-controls">
+          <button class="qty-btn" onclick="changeQty(${idx}, -1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${idx}, 1)">+</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function changeQty(idx, delta) {
+    cart[idx].qty += delta;
+    if (cart[idx].qty <= 0) cart.splice(idx, 1);
+    updateCartUI();
+  }
+
+  // ===== CART TOGGLE =====
+  function toggleCart() {
+    const sidebar = document.getElementById('cart-sidebar');
+    const overlay = document.getElementById('cart-overlay');
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('show');
+  }
+
+  // ===== CHECKOUT =====
+  function openCheckout() {
+    if (cart.length === 0) {
+      showToast('⚠️', 'Cart is empty! Add some pizza first.');
+      return;
+    }
+    
+    // Populate summary
+    const summaryEl = document.getElementById('summary-items');
+    const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+    
+    summaryEl.innerHTML = cart.map(i => `
+      <div class="summary-item">
+        <span>${i.emoji} ${i.name} (${i.size}) x${i.qty}</span>
+        <span>₹${i.price * i.qty}</span>
+      </div>
+    `).join('');
+    
+    document.getElementById('summary-total').textContent = '₹' + total;
+    
+    document.getElementById('order-modal').classList.add('show');
+    toggleCart();
+  }
+
+  // ===== PAYMENT =====
+  function selectPayment(type, el) {
+    selectedPayment = type;
+    document.querySelectorAll('.payment-opt').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    
+    const upiSection = document.getElementById('upi-section');
+    if (type === 'upi' || type === 'online') {
+      upiSection.classList.add('show');
+    } else {
+      upiSection.classList.remove('show');
+    }
+  }
+
+  // ===== PLACE ORDER =====
+  function placeOrder() {
+    const name = document.getElementById('order-name').value.trim();
+    const phone = document.getElementById('order-phone').value.trim();
+    const address = document.getElementById('order-address').value.trim();
+    const notes = document.getElementById('order-notes').value.trim();
+
+    if (!name) { showToast('⚠️', 'Please enter your name!'); return; }
+    if (!phone || phone.length !== 10) { showToast('⚠️', 'Enter valid 10-digit mobile number!'); return; }
+    if (!address) { showToast('⚠️', 'Please enter delivery address!'); return; }
+    if (!selectedPayment) { showToast('⚠️', 'Please select payment method!'); return; }
+
+    const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+    const deliveryFee = total >= 249 ? 0 : 30;
+    const grandTotal = total + deliveryFee;
+
+    // Build WhatsApp message
+    const orderLines = cart.map(i => `  • ${i.emoji} ${i.name} (${i.size}) x${i.qty} = ₹${i.price * i.qty}`).join('\n');
+    const paymentMap = { upi: '📲 UPI Pay', cash: '💵 Cash on Delivery', online: '💳 Online Payment' };
+    
+    const whatsappMsg = encodeURIComponent(
+`🍕 *NEW ORDER - Le' Demons Pizza* 🍕
+━━━━━━━━━━━━━━━━━━━━
+👤 *Customer:* ${name}
+📱 *Mobile:* ${phone}
+📍 *Address:* ${address}
+━━━━━━━━━━━━━━━━━━━━
+🛒 *Order Items:*
+${orderLines}
+━━━━━━━━━━━━━━━━━━━━
+💰 *Subtotal:* ₹${total}
+🚚 *Delivery:* ${deliveryFee === 0 ? 'FREE 🎉' : '₹' + deliveryFee}
+✅ *Grand Total: ₹${grandTotal}*
+━━━━━━━━━━━━━━━━━━━━
+💳 *Payment:* ${paymentMap[selectedPayment]}
+${notes ? '💬 *Special Note:* ' + notes : ''}
+━━━━━━━━━━━━━━━━━━━━
+🙏 Please confirm this order!`
+    );
+
+    const waUrl = `https://wa.me/919711082205?text=${whatsappMsg}`;
+
+    // Show success
+    document.getElementById('success-message').innerHTML = `
+      Thank you, <strong>${name}</strong>! 🎉<br>
+      Your order of <strong>₹${grandTotal}</strong> has been placed!<br>
+      ${deliveryFee === 0 ? '🚚 Free delivery!' : `🚚 Delivery charge: ₹${deliveryFee}`}<br>
+      We'll confirm on WhatsApp shortly!
+    `;
+    document.getElementById('whatsapp-btn').href = waUrl;
+
+    closeModal('order-modal');
+    document.getElementById('success-modal').classList.add('show');
+
+    // Auto-open WhatsApp
+    setTimeout(() => { window.open(waUrl, '_blank'); }, 1000);
+
+    // Clear cart
+    cart = [];
+    selectedPayment = '';
+    updateCartUI();
+    document.getElementById('order-name').value = '';
+    document.getElementById('order-phone').value = '';
+    document.getElementById('order-address').value = '';
+    document.getElementById('order-notes').value = '';
+    document.querySelectorAll('.payment-opt').forEach(o => o.classList.remove('selected'));
+    document.getElementById('upi-section').classList.remove('show');
+  }
+
+  // ===== DELIVERY CHECK =====
+  function checkDelivery() {
+    const resultEl = document.getElementById('delivery-result');
+    resultEl.className = 'delivery-result';
+    resultEl.style.display = 'none';
+
+    if (!navigator.geolocation) {
+      resultEl.textContent = '⚠️ Location not supported in your browser. Please call us!';
+      resultEl.classList.add('no');
+      return;
+    }
+
+    const btn = document.querySelector('.check-delivery-btn');
+    btn.textContent = '📍 Checking your location...';
+    btn.disabled = true;
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        // Le' Demons Pizza approximate coordinates (Mangal Bazar, Ghaziabad)
+        const shopLat = 28.6692, shopLng = 77.4538;
+        const userLat = pos.coords.latitude;
+        const userLng = pos.coords.longitude;
+
+        const dist = getDistanceKm(shopLat, shopLng, userLat, userLng);
+        const distRounded = Math.round(dist * 10) / 10;
+
+        if (dist <= 10) {
+          resultEl.innerHTML = `✅ Great news! You are <strong>${distRounded} km</strong> from our shop.<br>We deliver to your location! 🚀`;
+          resultEl.classList.add('yes');
+        } else {
+          resultEl.innerHTML = `😢 You are <strong>${distRounded} km</strong> away.<br>We currently deliver within 10 km. Call us at 9711082205 to check!`;
+          resultEl.classList.add('no');
+        }
+
+        btn.textContent = '📍 Check Again';
+        btn.disabled = false;
+      },
+      (err) => {
+        resultEl.innerHTML = `⚠️ Couldn't get your location. Please allow location access or call us at <strong>9711082205</strong>!`;
+        resultEl.classList.add('no');
+        btn.textContent = '📍 Try Again';
+        btn.disabled = false;
+      }
+    );
+  }
+
+  function getDistanceKm(lat1, lng1, lat2, lng2) {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLng = (lng2 - lng1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLng/2) * Math.sin(dLng/2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  }
+
+  // ===== MODAL =====
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('show');
+  }
+
+  // ===== TOAST =====
+  function showToast(icon, msg) {
+    const toast = document.getElementById('toast');
+    document.getElementById('toast-icon').textContent = icon;
+    document.getElementById('toast-msg').textContent = msg;
+    toast.className = 'toast show';
+    setTimeout(() => { toast.className = 'toast'; }, 3000);
+  }
+
+  // ===== SCROLL =====
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scroll-top-btn');
+    if (window.scrollY > 400) btn.classList.add('show');
+    else btn.classList.remove('show');
+  });
+
+  // ===== NAV ACTIVE LINK =====
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  });
+
+  // ===== ITEM SELECT (card click) =====
+  function selectItem(card, name, prices, emoji) {
+    // Just highlight
+    document.querySelectorAll('.menu-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+  }
+
+  // Init
+  updateCartUI();
+</script>
+
+</body>
+</html>
